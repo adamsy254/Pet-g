@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#1e40af" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgGrad1)" />
+  <!-- Golden Retriever Dog Silhouette & Grooming Bubbles -->
+  <g fill="#ffffff" opacity="0.12">
+    <circle cx="200" cy="180" r="120" />
+    <circle cx="350" cy="120" r="70" />
+    <circle cx="650" cy="450" r="140" />
+    <path d="M 400 250 C 370 200, 430 140, 480 160 C 510 170, 540 140, 560 170 C 590 210, 540 280, 500 290 Z" />
+    <!-- Dog silhouette -->
+    <path d="M 320 420 C 320 360, 360 320, 420 320 C 470 320, 500 350, 520 380 C 540 370, 560 375, 570 395 C 570 410, 555 425, 540 425 L 540 500 L 510 500 L 510 460 L 440 460 L 440 500 L 410 500 L 410 440 C 370 450, 340 450, 320 420 Z" />
+  </g>
+</svg>

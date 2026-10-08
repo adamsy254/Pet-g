@@ -1,0 +1,21 @@
+# .gitlab-ci.yml
+# Builds the React frontend with Vite and publishes it via GitLab Pages.
+
+image: node:20
+
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  stage: deploy
+  script:
+    - npm install --no-audit --no-fund
+    - npx vite build
+    - rm -rf public
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

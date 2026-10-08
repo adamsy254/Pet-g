@@ -1,0 +1,6 @@
+{
+  "name": "Pet Grooming Salon Management System",
+  "description": "Pet grooming salon management system with appointment scheduling, custom service pricing, customer profiles, staff management, and reporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

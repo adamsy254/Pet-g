@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.85" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f766e" stop-opacity="0.85" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgGrad2)" />
+  <!-- Cat Silhouette & Bubbles -->
+  <g fill="#ffffff" opacity="0.12">
+    <circle cx="650" cy="180" r="110" />
+    <circle cx="150" cy="450" r="130" />
+    <!-- Cat head with ears -->
+    <path d="M 380 320 L 400 240 L 440 280 L 480 240 L 500 320 C 520 370, 480 430, 440 430 C 400 430, 360 370, 380 320 Z" />
+    <!-- Cat body -->
+    <ellipse cx="440" cy="470" rx="90" ry="70" />
+  </g>
+</svg>

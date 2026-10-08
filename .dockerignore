@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+yarn-error.log
+bun.lockb
+dist
+build
+.git
+.gitignore
+.vscode
+.idea
+.env
+.env.*
+!.env.example
+.DS_Store
+coverage
+*.md
