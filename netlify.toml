@@ -3,37 +3,35 @@
 # ============================================================
 
 [build]
-command = "npm install && npm run build"
-publish = "dist"
+  command = "npm install && npm run build"
+  publish = "dist"
 
 [build.environment]
-NODE_VERSION = "20"
+  NODE_VERSION = "20"
 
 # ============================================================
 # API proxy — forwards /api/* to Render backend
-# 200 = internal rewrite (proxy), NOT a redirect.
-# Browser stays on Netlify's domain → no CORS needed.
 # ============================================================
 [[redirects]]
-from = "/api/*"
-to = "https://pet-g.onrender.com/api/:splat"
-status = 200
-force = true
+  from = "/api/*"
+  to = "https://pet-g-1.onrender.com/api/:splat"
+  status = 200
+  force = true
 
 # ============================================================
-# SPA fallback — all other routes serve index.html
+# SPA fallback
 # ============================================================
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # ============================================================
 # Security headers
 # ============================================================
 [[headers]]
-for = "/*"
-[headers.values]
-X-Frame-Options = "SAMEORIGIN"
-X-Content-Type-Options = "nosniff"
-Referrer-Policy = "strict-origin-when-cross-origin"
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
