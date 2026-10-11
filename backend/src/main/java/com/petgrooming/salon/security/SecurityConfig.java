@@ -35,7 +35,6 @@ public class SecurityConfig {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        // Delegating encoder: reads {noop}, {bcrypt}, {pbkdf2} prefixes from the stored hash.
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
@@ -80,9 +79,12 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of(
-                "http://localhost:3000", "http://localhost:5173",
-                "http://127.0.0.1:3000", "http://127.0.0.1:5173"));
+        // Patterns (not origins) so wildcards work alongside setAllowCredentials(true)
+        configuration.setAllowedOriginPatterns(List.of(
+                "http://localhost:*",
+                "http://127.0.0.1:*",
+                "https://*.netlify.app",
+                "https://pet-g.onrender.com"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(Arrays.asList(
                 "Authorization", "Content-Type", "X-Requested-With", "Accept", "Origin"));
